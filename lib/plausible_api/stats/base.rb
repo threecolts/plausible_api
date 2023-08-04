@@ -52,9 +52,9 @@ module PlausibleApi
         if @options[:interval]
           errors.push({ interval: "#{e}#{allowed_interval.join(', ')}" }) unless allowed_interval.include? @options[:interval]
         end
-        if @options[:property]
-          errors.push({ property: "#{e}#{allowed_property.join(', ')}" }) unless (allowed_property.include? @options[:property] || @options[:property].include?("event:props:"))
-        end
+       # if @options[:property]
+       #   errors.push({ property: "#{e}#{allowed_property.join(', ')}" }) unless (allowed_property.include? @options[:property] || @options[:property].include?("event:props:"))
+       # end
         if @options[:filters]
           filters_array = @options[:filters].to_s.split(';')
           filters_array.each do |f|
