@@ -17,7 +17,12 @@ module PlausibleApi
 
       def request_url
         params = @options.select{ |_,v| !v.to_s.empty? }
-        [request_url_base, URI.encode_www_form(params)].reject{|e| e.empty?}.join('&')
+        puts "***************************"
+        url = [request_url_base, URI.encode_www_form(params)].reject{|e| e.empty?}.join('&')
+        puts url
+        puts "***************************"
+
+        return url
       end
 
       def parse_response(body)
