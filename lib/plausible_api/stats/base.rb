@@ -55,7 +55,7 @@ module PlausibleApi
        # if @options[:property]
        #   errors.push({ property: "#{e}#{allowed_property.join(', ')}" }) unless (allowed_property.include? @options[:property] || @options[:property].include?("event:props:"))
        # end
-        if @options[:filters]
+        if false && @options[:filters]
           filters_array = @options[:filters].to_s.split(';')
           filters_array.each do |f|
             parts = f.split("==")
