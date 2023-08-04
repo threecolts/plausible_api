@@ -29,6 +29,7 @@ module PlausibleApi
       end
 
       def errors
+        return []
         allowed_period   = %w(12mo 6mo month 30d 7d day custom)
         allowed_metrics  = %w(visitors visits pageviews views_per_visit bounce_rate visit_duration events)
         allowed_compare  = %w(previous_period)
